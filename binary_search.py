@@ -1,11 +1,11 @@
-def binarySearch(arr, target):
-    left = 0
-    right = len(arr)-1
+def binarySearch(arr, target):#remember that this only works on sorted arrays
+    left = 0 #left pointer.First element in array
+    right = len(arr)-1 #right pointer. Last element in array
 
     while(left <= right):
         mid = (left+right)//2  # 0 5 => ((0)(+)(5)/2)) = 2
 
-        if(arr[mid] == target):
+        if(arr[mid] == target):#return element if == target
             return mid
         elif(arr[mid] < target):
             left = mid + 1
